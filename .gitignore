@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# AI / ML models
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# Vector databases
+chroma/
+chroma_db/
+
+# Temporary files
+tmp/
+temp/
+
+# Large media
+*.mp4
+*.mov
+*.avi
+*.wav
+*.mp3
+
+# Node
+node_modules/
+
+# Build
+dist/
+build/
