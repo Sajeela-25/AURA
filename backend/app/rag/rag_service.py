@@ -16,7 +16,7 @@ from app.rag.vector_store import (
 )
 
 
-def ingest_pdf(pdf_path, company_id, document_id=None):
+def ingest_pdf(pdf_path, company_id, doc_type, document_id=None):
 
     if not company_id or not company_id.strip():
         raise ValueError("company_id is required.")
@@ -51,6 +51,7 @@ def ingest_pdf(pdf_path, company_id, document_id=None):
         embeddings=embeddings,
         company_id=company_id,
         document_id=document_id,
+        doc_type=doc_type,
         source=documents[0]["source"]
     )
 
@@ -63,8 +64,7 @@ def ingest_pdf(pdf_path, company_id, document_id=None):
     }
 
 
-def retrieve_context(question, company_id, top_k=5):
-
+def retrieve_context(question, company_id, top_k=5, doc_type=None):
     if not question.strip():
         raise ValueError("Question cannot be empty.")
 
@@ -73,5 +73,6 @@ def retrieve_context(question, company_id, top_k=5):
     return search_chunks(
         query_embedding=query_embedding,
         company_id=company_id,
-        top_k=top_k
+        top_k=top_k,
+        doc_type=doc_type,
     )
