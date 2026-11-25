@@ -7,3 +7,4 @@ pymupdf
 langchain-text-splitters 
 sentence-transformers 
 chromadb
+python-multipart

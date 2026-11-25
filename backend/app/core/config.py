@@ -34,5 +34,5 @@ CHROMA_COLLECTION = os.getenv(
 )
 
 UPLOAD_DIR = PROJECT_ROOT / "data" / "uploads"
-
+UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 CHROMA_DIR = PROJECT_ROOT / CHROMA_PATH
